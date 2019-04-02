@@ -3,7 +3,7 @@ import { hasProperties } from '../index';
 describe('create-typeguard', () => {
 
     describe('hasProperties', () => {
-        it('should return false when object has not any of the given property', () => {
+        it('should return false when the object has not any of the given property', () => {
             expect(hasProperties({ foo: 'bar' }, 'foo', 'test')).toBe(false);
         });
 
