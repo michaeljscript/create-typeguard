@@ -5,9 +5,9 @@ function hasProperties<T extends object, K extends string>(obj: T, ...keys: K[])
 }
 
 
-const createValidator = <T>(parse: Parser<T>) => (value: unknown): value is T => {
+const createTypeGuard = <T>(parse: Parser<T>) => (value: unknown): value is T => {
     return parse(value) !== null;
 };
 
-export {hasProperties, createValidator};
-export default createValidator;
+export {hasProperties, createTypeGuard};
+export default createTypeGuard;
