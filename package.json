@@ -4,10 +4,12 @@
   "description": "Library for creating safe Type Guards",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config jestconfig.json"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,10 @@
   },
   "homepage": "https://github.com/MichalSzorad/create-typeguard#readme",
   "dependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.6.0",
+    "ts-jest": "^24.0.1",
     "typescript": "^3.4.1"
   },
-  "prepare" : "npm run build"
+  "prepare": "npm run build"
 }
