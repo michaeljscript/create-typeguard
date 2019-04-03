@@ -56,6 +56,8 @@ const isPerson = createTypeGuard<Person>(data => {
       return { name, age };
     }
   }
+  
+  return null;
 });
 
 
