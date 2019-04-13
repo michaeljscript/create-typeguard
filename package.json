@@ -21,7 +21,7 @@
     "TypeScript"
   ],
   "author": "Michal Szorad, miso.szorad@gmail.com",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MichalSzorad/create-typeguard/issues"
   },
