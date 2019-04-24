@@ -40,8 +40,8 @@ function parsePerson(value: unknown): Person | null {
 }
 
 function parseAdmin(value: Person): Admin | null {
-  if (value.type === PersonType.ADMIN) {
-    const { age, type } = value;
+  const { age, type } = value;
+  if (type === PersonType.ADMIN) {
     return { age, type };
   }
 
