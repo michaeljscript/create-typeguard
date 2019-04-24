@@ -39,6 +39,17 @@ function parsePerson(value: unknown): Person | null {
   return null;
 }
 
+function parseAdmin(value: Person): Admin | null {
+  if (value.type === PersonType.ADMIN) {
+    const { age, type } = value;
+    return { age, type };
+  }
+
+  return null;
+}
+
+const isAdmin3 = createTypeGuard(parseAdmin);
+
 const isPerson2 = createTypeGuard(parsePerson);
 
 const isPerson = createTypeGuard<Person>(value => {
