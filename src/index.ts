@@ -5,7 +5,7 @@ function hasProperties<T extends object, K extends string>(obj: T, ...keys: K[])
 }
 
 
-const createTypeGuard = <T>(parse: Parser<T>) => (value: unknown): value is T => {
+const createTypeGuard = <T>(parse: Parser<Required<T>>) => (value: unknown): value is T => {
     return parse(value) !== null;
 };
 
